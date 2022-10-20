@@ -12,12 +12,22 @@ public class _3_Compare2Numbers {
         double num1 = input.nextDouble();
         System.out.print("Input second floatingpoint number: ");
         double num2 = input.nextDouble();
+
+        num1 = Math.round(num1 * 100);
+        num1 = num1 / 100;
+
+        num2 = Math.round(num2 * 100);
+        num2 = num2 / 100;
+
+        if (num1 == num2)
+        {
+            System.out.println("They are the same upto two decimal places");
+        }
+        else
+        {
+            System.out.println("They are different");
+        }
         input.close();
 
-        if (Math.abs(num1 - num2) <= 0.001) {
-            System.out.println("These numbers are the same.");
-        } else {
-            System.out.println("These numbers are different.");
-        }
     }
 }
